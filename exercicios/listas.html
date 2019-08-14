@@ -1,0 +1,64 @@
+<!--
+  A ativação do código js só irá funcionar ao acecessar diretamente o arquivo listas.html
+-->
+
+<h2>Principais termos de Cloud Computer</h2>
+
+<dl>
+  <dt>BaaS</dt>
+  <dd>Backend como serviço</dd>
+  <dt>SaaS</dt>
+  <dd>Software como serviço</dd>
+</dl>
+
+<h2>Lista Aninhadas</h2>
+
+<ul class="tree">
+  <li>
+    <span myfolder>backend</span>
+    <ul>
+      <li>
+        <span myfolder>app</span>
+        <ul>
+          <li>produto.js</li>
+          <li>usuario.js</li>
+          <li>venda.js</li>
+        </ul>
+      </li>
+      <li>
+        <span myfolder>config</span>
+        <ul>
+          <li>database.js</li>
+          <li>routes.js</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <span myfolder>frontend</span>
+    <ul>
+      <li>
+        <span myfolder>public</span>
+        <ul>
+          <li>app.css</li>
+          <li>app.js</li>
+          <li>index.html</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!--
+  Esconder e mostrar pastas
+-->
+<link rel="stylesheet" href="../style.css" />
+<script>
+  document.querySelectorAll("[myfolder]").forEach(folder => {
+    folder.onclick = function(e) {
+      const ul = folder.nextElementSibling;
+      const atualDisplay = ul.style.display;
+      ul.style.display = atualDisplay === "none" ? "block" : "none";
+    };
+  });
+</script>
