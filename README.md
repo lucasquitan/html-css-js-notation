@@ -73,3 +73,15 @@ No HTML5, foram introduzidos algumas tags que trazem um novo significado para os
 - Fixed: Mantém um elemento fixado na página, mesmo com a rolagem da mesma.
 - Absolute: Simila a ***rellative***, porém dentro de um componente. Como "*posição absoluta em relação ao componente X*"
 - Sticky: Mistura de **static** e **fixed**.
+
+***
+
+# Lista de Tarefas
+
+O projeto abaixo conta com:
+
+- Utilização do Local Storage;
+- Funções de click pelo Javascript;
+- Estilização pelo CSS;
+
+![Imagem](https://github.com/lucasquitan/html-css-js-notation/blob/master/assets/Lista%20de%20Tarefas.png?raw=true)
