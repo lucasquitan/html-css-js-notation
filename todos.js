@@ -1,23 +1,23 @@
-var listElement = document.querySelector('#app ul');
-var inputElement = document.querySelector('#app input');
-var buttonElement = document.querySelector('#app button');
+const listElement = document.querySelector('#app ul');
+const inputElement = document.querySelector('#app input');
+const buttonElement = document.querySelector('#app button');
 
-var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+const todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function renderTodos() {
-  listElement.innerHTML = "";
+  listElement.innerHTML = '';
 
   for (todo of todos) {
-    var todoElement = document.createElement('li');
-    var todoText = document.createTextNode(todo);
+    const todoElement = document.createElement('li');
+    const todoText = document.createTextNode(todo);
 
-    var linkElement = document.createElement('a');
+    const linkElement = document.createElement('a');
     linkElement.setAttribute('href', '#');
 
-    var pos = todos.indexOf(todo);
-    linkElement.setAttribute('onclick', 'deleteTodo('+pos+')');
+    const pos = todos.indexOf(todo);
+    linkElement.setAttribute('onclick', `deleteTodo(${pos})`);
 
-    var linkText = document.createTextNode('Excluir');
+    const linkText = document.createTextNode('Excluir');
 
     linkElement.appendChild(linkText);
 
@@ -31,10 +31,10 @@ function renderTodos() {
 renderTodos();
 
 function addTodo() {
-  var todoText = inputElement.value;
+  const todoText = inputElement.value;
 
-  todos.push(todoText);  
-  inputElement.value="";
+  todos.push(todoText);
+  inputElement.value = '';
   renderTodos();
   saveToStorage();
 }
